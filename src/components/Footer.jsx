@@ -2,8 +2,8 @@ import { FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="m-auto mx-2  my-6  max-w-[72rem] rounded-full bg-neutral-less-dark px-3 py-2 lg:block">
-      <ul className="m-auto flex items-center justify-end gap-4 tracking-wide">
+    <footer className="my-6 px-2">
+      <ul className="m-auto flex  max-w-[72rem] items-center justify-end gap-4 rounded-full bg-neutral-less-dark px-3 py-2 tracking-wide">
         <li className="mr-auto text-neutral-50">
           <span>Let's Connect</span>
         </li>
