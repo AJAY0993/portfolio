@@ -1,0 +1,23 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.fancyBorderRadius {
+    border-radius: 50% 50% 59% 41% / 30% 49% 51% 70%
+}
+
+:root {
+    --neutral-darker: #0C0C0D;
+    --neutral-dark: #131313;
+    --neutral-less-dark: #272727;
+    --neutral-less-light: #6F6F6F;
+    --neutral-light: #C8C8C8;
+    --neutral-lighter: #e5e5e5;
+    --primary: #5FB9B0;
+    --secondary: #B292FF;
+    --tertiary: #111111;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
