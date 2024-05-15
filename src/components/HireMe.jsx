@@ -83,7 +83,7 @@ function HireMe() {
           </div>
           <div>
             <textarea
-              className="min-h-48 w-full rounded-lg border-[1px] border-secondary bg-transparent px-2 py-2 text-inherit placeholder:font-thin placeholder:text-neutral-light focus:border-purple-700 focus:outline-0"
+              className="min-h-48 w-full rounded-lg border-[1px] border-secondary bg-transparent px-2 py-2 text-inherit placeholder:font-thin placeholder:text-neutral-lighter focus:border-purple-700 focus:outline-0"
               name="message"
               placeholder="Enter your message here"
               ref={messageRef}
@@ -108,7 +108,7 @@ const Input = forwardRef(({ type, placeholder, name, state }, ref) => {
   return (
     <div className="min-w-60 flex-grow">
       <input
-        className="w-full rounded-md  border-[1px] border-secondary bg-transparent px-2 py-2 placeholder:font-thin placeholder:text-neutral-light focus:border-purple-700 focus:outline-0"
+        className="w-full rounded-md  border-[1px] border-secondary bg-transparent px-2 py-2 placeholder:font-thin placeholder:text-neutral-lighter focus:border-purple-700 focus:outline-0"
         type={type}
         name={name}
         placeholder={placeholder}

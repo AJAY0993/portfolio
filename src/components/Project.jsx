@@ -10,25 +10,26 @@ function Project({ project, children }) {
           <ul className="list-disc">{children}</ul>
           <div className="flex items-center gap-4">
             <a
-              className=" text-neutral-lighter flex w-fit basis-24 items-center gap-2 rounded-3xl border-[1px] border-transparent bg-secondary bg-opacity-30 px-4 py-2 hover:border-purple-600"
+              className=" flex w-fit basis-24 items-center gap-2 rounded-3xl border-[1px] border-transparent bg-secondary bg-opacity-30 px-4 py-2 text-neutral-lighter hover:border-purple-600"
               href={project.code}
               target="_blank"
             >
-              <FaCode className="text-neutral-lighter inline-block bg-transparent" />{" "}
+              <FaCode className="inline-block bg-transparent text-neutral-lighter" />{" "}
               Code
             </a>
             <a
-              className=" text-neutral-lighter min-w-26 flex w-fit items-center gap-2 rounded-3xl border-[1px] border-transparent bg-secondary bg-opacity-30 px-4 py-2 hover:border-purple-600"
+              className=" min-w-26 flex w-fit items-center gap-2 rounded-3xl border-[1px] border-transparent bg-secondary bg-opacity-30 px-4 py-2 text-neutral-lighter hover:border-purple-600"
               href={project.live}
               target="_blank"
             >
-              <FaLink className="text-neutral-lighter inline-block bg-transparent" />{" "}
+              <FaLink className="inline-block bg-transparent text-neutral-lighter" />{" "}
               Live
             </a>
           </div>
         </div>
-        <div className="flex aspect-video w-[30rem] items-center justify-center self-center overflow-hidden rounded-lg border-2 border-primary p-2">
+        <div className="flex aspect-video w-[31rem] items-center justify-center  self-center overflow-hidden rounded-lg shadow-lg shadow-neutral-700">
           <video
+            className="aspect-video rounded-lg object-cover  "
             preload="metadata"
             src={project.video}
             autoPlay
@@ -43,7 +44,7 @@ function Project({ project, children }) {
 
 Project.ListItem = function ProjectListItem({ children }) {
   return (
-    <li className="text-neutral-lighter my-2 max-w-[58ch] font-thin leading-10 lg:my-11 lg:text-xl">
+    <li className="my-2 max-w-[58ch] font-thin leading-10 text-neutral-lighter lg:my-11 lg:text-xl">
       {children}
     </li>
   );

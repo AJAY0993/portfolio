@@ -19,7 +19,7 @@ const projects = [
   {
     title: "E Comm App",
     id: "project3",
-    video: "socialMediaApp.mp4",
+    video: "shopCO.mp4",
     code: "",
     live: "",
   },
