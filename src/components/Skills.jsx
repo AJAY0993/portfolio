@@ -1,45 +1,50 @@
 import Heading from "./Heading";
 import Skill from "./Skill";
-const languages = [
+const frontend = [
   {
     name: "HTML",
-    border: "",
-    id: "language1",
+    border: "border-[1px] border-orange-400",
+    id: "frontend1",
   },
   {
     name: "CSS",
     border: "",
-    id: "language2",
+    id: "frontend2",
   },
   {
     name: "Javascript",
     border: "border-[1px] border-yellow-500",
-    id: "language3",
+    id: "frontend3",
   },
   {
     name: "Typescript",
     border: "border-[1px] border-blue-500",
-    id: "language4",
+    id: "frontend4",
   },
   {
-    name: "SQL",
-    border: "",
-    id: "language5",
+    name: "React",
+    border: "border-[1px] border-blue-700",
+    id: "frontend5",
+  },
+  {
+    name: "Next.js",
+    border: "border-[1px] border-white",
+    id: "frontend5",
   },
 ];
 
-const frameworks = [
+const backend = [
   {
-    name: "React js",
-    border: "border-[1px] border-blue-600",
-  },
-  {
-    name: "Node/Express js",
+    name: "Node.js/Express.js",
     border: "border-[1px] border-green-400",
   },
   {
-    name: "Next js",
-    border: "border-[1px] border-neutral-100",
+    name: "Hono",
+    border: "border-[1px] border-orange-400",
+  },
+  {
+    name: "SocketIO",
+    border: "border-[1px] border-gray-100",
   },
 ];
 
@@ -61,20 +66,20 @@ const database = [
   },
 ];
 
-const devTools = [
+const devops = [
   {
-    name: "Git/Github",
+    name: "Github actions",
     border: "border-[1px] border-gray-500",
     id: "devTools1",
   },
   {
-    name: "VS Code",
+    name: "Docker",
     border: "border-[1px] border-blue-700",
     id: "devTools2",
   },
   {
-    name: "Figma",
-    border: "border-[1px] border-neutral-50",
+    name: "Aws",
+    border: "border-[1px] border-yello-700",
     id: "devTools3",
   },
 ];
@@ -86,14 +91,10 @@ function Skills() {
     >
       <Heading>Skills</Heading>
       <div className="flex flex-wrap gap-16 pt-16">
-        <Skill title="Languages" skills={languages} />
-        <Skill title="Frameworks" skills={frameworks} />
+        <Skill title="Frontend" skills={frontend} />
+        <Skill title="Backend" skills={backend} />
         <Skill title="Database Management" skills={database} />
-        <Skill title="Developer Tools" skills={devTools} />
-        <Skill
-          title="Libraries"
-          skills={[{ name: "Tailwind", border: "border-[1px] border-sky-300" }]}
-        />
+        <Skill title="Dev ops" skills={devops} />
       </div>
     </section>
   );
