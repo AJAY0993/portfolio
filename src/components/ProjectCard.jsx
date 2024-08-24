@@ -30,12 +30,11 @@ function ProjectCard({ project }) {
       <div className=" mt-2 text-primary">{project.techStack.join(", ")}</div>
       <div className="mt-2">
         <p className="text-lg font-light tracking-wide text-neutral-200">
-          {project.intro}
+          {project.intro} &nbsp;
           <button
             className="cursor-pointer font-normal text-primary hover:underline"
             onClick={show}
           >
-            {" "}
             Learn more <PiCaretRight className="inline-block -translate-x-1 " />
           </button>
         </p>
