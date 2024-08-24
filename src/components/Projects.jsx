@@ -1,173 +1,148 @@
-import { useState } from "react";
 import Heading from "./Heading";
-import Project from "./Project";
-import Strong from "./Strong";
-import Button from "./Button";
+import ProjectCard from "./ProjectCard";
+
 const projects = [
   {
-    title: "Social Media App",
-    id: "project1",
-    video: "socialMediaApp.mp4",
-    code: "https://github.com/AJAY0993/Social-media-App",
-    live: "https://social-media-app-f3lq.onrender.com",
-  },
-  {
-    title: "Video Library App",
-    id: "project2",
-    video: "videoLibrary.mp4",
+    title: "Vid Vault",
+    intro:
+      "A full-stack app built with Express and React, featuring authentication, video filters, and playlists.",
+    techStack: ["Javascript", "React", "Nodejs", "MongoDB"],
+    description: [
+      "Developed a full-stack web application using Express for the backend and React for the frontend.",
+
+      "Built a REST API with Express to serve the frontend application.",
+
+      "Implemented a robust authentication system to ensure secure access control.",
+
+      "Used encryption techniques to enhance security measures for user authentication.",
+
+      "Created filtering options to enable users to discover videos based on genres and search queries.",
+
+      "Enabled users to create and manage playlists, track watch history, and share videos seamlessly.",
+    ],
+    video: "project-videos/videoLibrary.mp4",
+    image: "project-images/vid-vault.png",
     code: "https://github.com/AJAY0993/Video-library-Frontend",
     live: "https://video-library-frontend.vercel.app",
+    id: "project1",
+  },
+  {
+    title: "Social hub",
+    intro:
+      "Developed a comprehensive social media app with real-time chat and dynamic navigation features.",
+    description: [
+      "Developed a fully functional social media application, showcasing proficiency in front-end and back-end development, database management, and user experience design.",
+
+      "Utilized React Router for seamless navigation, ensuring a smooth and intuitive user experience.",
+
+      "Employed React Query for efficient server state management, simplifying data fetching, caching, and synchronization while reducing boilerplate code.",
+
+      "Integrated live chat functionality for real-time communication between users, using Socket.IO to enable seamless interactions.",
+
+      "Focused on delivering a robust and user-friendly application that meets modern web standards.",
+    ],
+    techStack: [
+      "React",
+      "Redux",
+      "React query",
+      "Socket IO",
+      "Nodejs",
+      "MongoDB",
+    ],
+    video: "project-videos/socialMediaApp.mp4",
+    image: "project-images/social-hub.png",
+    code: "https://github.com/AJAY0993/Social-media-App",
+    live: "https://social-media-app-f3lq.onrender.com",
+    id: "project2",
   },
   {
     title: "E Comm App",
-    id: "project3",
-    video: "shopCO.mp4",
+    intro:
+      "Developed a user-friendly e-commerce app with advanced search, secure payments, filtering, sorting options, and Stripe integration.",
+    description: [
+      "Developed a user-friendly e-commerce app with features like product search, secure payments, and customer reviews.",
+
+      "Implemented filters such as category, discounts, and ratings to help users find what they need easily.",
+
+      "Added sorting options to enhance product search and selection.",
+
+      "Integrated Stripe for safe and hassle-free transactions during customer purchases.",
+    ],
+    techStack: [
+      "React",
+      "Redux",
+      "React query",
+      "Tailwind",
+      "Stripe API",
+      "Express.js",
+      "MongoDB",
+    ],
+    video: "project-videos/shopCO.mp4",
+    image: "project-images/shop-co.png",
     code: "https://github.com/AJAY0993/Shop.co",
     live: "https://shopco-production.up.railway.app",
+    id: "project3",
   },
   {
     title: "Cafe",
-    id: "project4",
-    video: "cafe.mp4",
+    intro:
+      "Created a movie app using vanilla CSS and JavaScript with features for trending genres, favorites, search, and pagination.",
+    description: [
+      "No Frameworks: Purely made using vanilla CSS and JavaScript.",
+
+      "Trending Section: Browse movies/TV shows by genres such as Action, Adventure, Comedy, Drama, etc.",
+
+      "Favorites: Save your favorite movies/TV shows for quick access.",
+
+      "Search: Search for specific movies or shows using keywords.",
+
+      "Pagination: Navigate through multiple pages of search results.",
+    ],
+    techStack: ["HTML", "CSS", "Javacript"],
+    video: "project-videos/cafe.mp4",
+    image: "project-images/cafe.png",
     code: "https://github.com/AJAY0993/CAFE",
-    live: "cafe-omega-ecru.vercel.app",
+    live: "https://cafe-omega-ecru.vercel.app",
+    id: "project4",
   },
   {
     title: "Storywave",
-    id: "project5",
-    video: "storywave.mp4",
+    intro:
+      "Built a secure, serverless app with JWT authentication, article management, responsive design, and support for dark and light modes.",
+    description: [
+      "Sign Up/Login: Users can create accounts and log in using JWT for secure authentication.",
+      "Create: Authenticated users can write and edit articles.",
+      "Read Articles: Users can browse and read published articles.",
+      "Responsive Design: The app is designed to work seamlessly on both desktop and mobile devices.",
+    ],
+    techStack: [
+      "Typescript",
+      "Tailwind",
+      "React",
+      "Redux",
+      "Hono",
+      "Postgresql",
+    ],
+    video: "project-videos/storywave.mp4",
+    image: "project-images/story-wave.png",
     code: "https://github.com/AJAY0993/storywave",
-    live: "storywave.vercel.app",
+    live: "https://storywave.vercel.app",
+    id: "project5",
   },
 ];
 
 function Projects() {
-  const [showMore, setShowMore] = useState(false);
   return (
     <section
       className="mt-8 border-t-[1px] border-neutral-light px-4 lg:mt-16 lg:px-9 "
       id="projects"
     >
       <Heading>Projects</Heading>
-      <div className="flex flex-col gap-16 divide-y-2 p-4 lg:p-9">
-        <Project project={projects[0]} key={projects[0].id}>
-          <Project.ListItem>
-            Developed a fully functional social media application, demonstrating
-            proficiency in <Strong>front-end</Strong> and{" "}
-            <Strong>back-end development, database management</Strong>, and user
-            experience design.
-          </Project.ListItem>
-          <Project.ListItem>
-            {" "}
-            I utilized <Strong>React Router</Strong> for seamless navigation,
-            ensuring a smooth user experience. <Strong>React Query</Strong> for
-            managing server state which not only simplified data fetching,
-            caching, and synchronization but also significantly cut down on
-            boilerplate code.
-          </Project.ListItem>
-          <Project.ListItem>
-            Integrated <Strong>live chat</Strong> functionality for seamless
-            real-time communication between users, utilizing{" "}
-            <Strong>Socket.IO</Strong>.
-          </Project.ListItem>
-        </Project>
-
-        <Project project={projects[1]} key={projects[1].id}>
-          <Project.ListItem>
-            Developed a full-stack web application using with{" "}
-            <Strong>Express</Strong> serving a <Strong>REST API</Strong> with{" "}
-            <Strong>React</Strong> as the frontend.
-          </Project.ListItem>
-          <Project.ListItem>
-            {" "}
-            Implemented a robust <Strong>authentication system</Strong> to
-            ensure secure access control and user authentication with{" "}
-            <Strong>encryption techniques</Strong> to enhance security measures.
-          </Project.ListItem>
-          <Project.ListItem>
-            Created <Strong>filtering</Strong> options enabling users to
-            discover videos based on genres, and search queries. and enabled
-            users to create and manage{" "}
-            <Strong>playlists, track watch history</Strong>, and seamlessly
-            share videos.
-          </Project.ListItem>
-        </Project>
-
-        <Project project={projects[2]} key={projects[2].id}>
-          <Project.ListItem>
-            Developed a user-friendly e-commerce app with handy features like
-            easy{" "}
-            <Strong>
-              product search, secure payments, and customer reviews
-            </Strong>
-            .
-          </Project.ListItem>
-          <Project.ListItem>
-            Made it simple for users to find what they need with{" "}
-            <Strong>filters</Strong> like{" "}
-            <Strong>category, discounts, and ratings</Strong>, plus{" "}
-            <Strong>sorting</Strong>
-            options.
-          </Project.ListItem>
-          <Project.ListItem>
-            Integrated <Strong>Stripe</Strong> for safe and hassle-free
-            transactions when customers make purchases.
-          </Project.ListItem>
-        </Project>
-        {showMore && (
-          <>
-            <Project project={projects[3]} key={projects[3].id}>
-              <Project.ListItem>
-                <Strong>No Franeworks:</Strong>Purely made in vanilla CSS and
-                Javascript
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Trending Section:</Strong> Browse movies/TV shows by
-                genres such as Action, Adventure, Comedy, Drama, etc.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Favorites:</Strong> Save your favorite movies/TV shows
-                for quick access.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Search:</Strong> Search for specific movies or shows
-                using keywords.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Pagination:</Strong>Navigate through multiple pages of
-                search results.
-              </Project.ListItem>
-            </Project>
-            <Project project={projects[4]} key={projects[4].id}>
-              <Project.ListItem>
-                <Strong>Sign Up/Login:</Strong> Users can create accounts and
-                log in using JWT for secure authentication.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Create:</Strong> Authenticated users can write and edit
-                articles.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Read Articles:</Strong> Users can browse and read
-                published articles.
-              </Project.ListItem>
-              <Project.ListItem>
-                <Strong>Responsive Design:</Strong> The app is designed to work
-                seamlessly on both desktop and mobile devices.
-              </Project.ListItem>
-            </Project>
-          </>
-        )}
+      <div className="m-auto mt-16 flex w-full max-w-[850px] flex-wrap justify-center gap-20">
+        {projects.map((project, index) => (
+          <ProjectCard project={project} key={index} />
+        ))}
       </div>
-      {
-        <Button
-          type="text"
-          center={true}
-          onClick={() => setShowMore((s) => !s)}
-        >
-          {showMore ? "Show Less" : "Show More"}
-        </Button>
-      }
     </section>
   );
 }

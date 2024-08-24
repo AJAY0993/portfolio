@@ -6,6 +6,11 @@ body {
     border-radius: 50% 50% 59% 41% / 30% 49% 51% 70%
 }
 
+::selection {
+    background-color: var(--primary);
+    color: #000000;
+}
+
 :root {
     --neutral-darker: #0C0C0D;
     --neutral-dark: #131313;
@@ -17,6 +22,16 @@ body {
     --secondary: #B292FF;
     --tertiary: #111111;
 }
+
+.tilt-animation {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.tilt-animation:hover {
+    transform: rotateX(10deg) rotateY(10deg);
+}
+
 
 @tailwind base;
 @tailwind components;

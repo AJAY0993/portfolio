@@ -3,8 +3,8 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 function Header() {
   return (
     <>
-      <div className="fixed left-0 right-0 top-0 hidden h-24 bg-opacity-50 backdrop-blur-lg lg:block"></div>
-      <header className="sticky left-1/2 top-6 m-auto hidden w-[38.8rem] -translate-x-1/2 rounded-full bg-neutral-less-dark px-3 py-6 lg:block">
+      <div className="fixed left-0 right-0 top-0 z-10 hidden h-24 bg-opacity-50 backdrop-blur-lg lg:block"></div>
+      <header className="sticky left-1/2 top-6 z-20 m-auto hidden w-[38.8rem] -translate-x-1/2 rounded-full bg-neutral-less-dark px-3 py-6 lg:block">
         <ul className="flex items-center justify-around tracking-wide">
           <li>
             <a

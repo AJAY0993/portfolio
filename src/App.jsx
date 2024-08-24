@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import ContactMeButton from "./components/ContactMeButton";
 import Footer from "./components/Footer";
+import useCustomScrollSpeed from "./hooks/useCustomScrollSpeed";
 
 function App() {
   return (
