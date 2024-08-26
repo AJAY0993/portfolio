@@ -58,14 +58,16 @@ function ProjectDescription({ close, project }) {
         className="m-auto mt-32 h-auto w-full max-w-[600px] translate-y-full overflow-hidden rounded-t-lg bg-stone-800 pb-4 transition-all duration-300 ease-in-out"
         ref={descRef}
       >
-        <video
-          className="aspect-video w-full object-cover"
-          preload="metadata"
-          src={project.video}
-          autoPlay
-          loop
-          muted
-        ></video>
+        {project?.video && (
+          <video
+            className="aspect-video w-full object-cover"
+            preload="metadata"
+            src={project.video}
+            autoPlay
+            loop
+            muted
+          ></video>
+        )}
         <div className="p-4">
           <h2 className="2xl font-bold text-neutral-50 lg:text-3xl">
             {project.title}
@@ -94,12 +96,14 @@ function ProjectDescription({ close, project }) {
               >
                 <FaGithub /> Source Code
               </a>
-              <a
-                className="flex cursor-pointer items-center gap-2 font-medium text-primary hover:underline"
-                href={project.live}
-              >
-                <IoIosLogOut /> Live Project
-              </a>
+              {project?.live && (
+                <a
+                  className="flex cursor-pointer items-center gap-2 font-medium text-primary hover:underline"
+                  href={project.live}
+                >
+                  <IoIosLogOut /> Live Project
+                </a>
+              )}
             </div>
           </div>
         </div>

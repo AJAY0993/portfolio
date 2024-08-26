@@ -106,6 +106,22 @@ const projects = [
     id: "project4",
   },
   {
+    title: "Kata vault",
+    intro:
+      "Engineered a Node.js web scraper to automate and optimize the organization and management of Codewars katas",
+    description: [
+      "Developed a web scraper with Node.js and Puppeteer to retrieve and organize completed Codewars katas in a local folder, categorized by problem and language.",
+      "Implemented asynchronous HTTP requests and file operations, caching reducing processing time by approximately 60%.",
+      "Implemented an exponential back-off strategy to handle API rate limits and prevent program crashes.",
+      "Leveraged GitHub Actions for automating the scraping process, ensuring regular updates and seamless integration with the GitHub repository for continuous logging of solved Codewars katas.",
+      "Enabled users to create and manage playlists, track watch history, and seamlessly share videos.",
+    ],
+    techStack: ["Node.js", "Puppeteer", "Github actions", "Redis"],
+    image: "project-images/codewars.jpeg",
+    code: "https://github.com/AJAY0993/kata-scraper",
+    id: "project6",
+  },
+  {
     title: "Storywave",
     intro:
       "Built a secure, serverless app with JWT authentication, article management, responsive design, and support for dark and light modes.",
